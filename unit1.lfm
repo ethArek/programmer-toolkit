@@ -1,0 +1,37 @@
+object Form1: TForm1
+  Left = 783
+  Height = 326
+  Top = 316
+  Width = 571
+  Caption = 'Programmer Toolkit v0.0.1'
+  ClientHeight = 326
+  ClientWidth = 571
+  LCLVersion = '2.0.6.0'
+  object Decode_Encode_B64_Input: TEdit
+    Left = 16
+    Height = 33
+    Top = 16
+    Width = 320
+    OnChange = Decode_Encode_B64_InputChange
+    TabOrder = 0
+    Text = 'Put string to encode/decode'
+  end
+  object Encode_B64: TButton
+    Left = 352
+    Height = 33
+    Top = 16
+    Width = 100
+    Caption = 'Encode B64'
+    OnClick = Encode_B64Click
+    TabOrder = 1
+  end
+  object Decode_B64: TButton
+    Left = 464
+    Height = 33
+    Top = 16
+    Width = 96
+    Caption = 'Decode B64'
+    OnClick = Decode_B64Click
+    TabOrder = 2
+  end
+end
