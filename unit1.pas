@@ -16,7 +16,6 @@ type
     Decode_B64: TButton;
     Decode_Encode_B64_Input: TEdit;
     procedure Decode_B64Click(Sender: TObject);
-    procedure Decode_Encode_B64_InputChange(Sender: TObject);
     procedure Encode_B64Click(Sender: TObject);
   private
 
@@ -49,11 +48,6 @@ begin
   input := Decode_Encode_B64_Input.Text;
   decodedValue := DecodeStringBase64(input);
   Decode_Encode_B64_Input.Text := decodedValue;
-end;
-
-procedure TForm1.Decode_Encode_B64_InputChange(Sender: TObject);
-begin
-
 end;
 
 end.
