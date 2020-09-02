@@ -12,11 +12,14 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
+    Generate_UUID_Btn: TButton;
+    UUID_Output: TEdit;
     Encode_B64: TButton;
     Decode_B64: TButton;
     Decode_Encode_B64_Input: TEdit;
     procedure Decode_B64Click(Sender: TObject);
     procedure Encode_B64Click(Sender: TObject);
+    procedure Generate_UUID_BtnClick(Sender: TObject);
   private
 
   public
@@ -48,6 +51,16 @@ begin
   input := Decode_Encode_B64_Input.Text;
   decodedValue := DecodeStringBase64(input);
   Decode_Encode_B64_Input.Text := decodedValue;
+end;
+
+procedure TForm1.Generate_UUID_BtnClick(Sender: TObject);
+var
+  uuid: TGUID;
+  uuidStr: string;
+begin
+  CreateGUID(uuid);
+  uuidStr := GUIDToString(uuid);
+  UUID_Output.Text := uuidStr.Trim('{').Trim('}');
 end;
 
 end.

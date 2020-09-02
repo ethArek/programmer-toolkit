@@ -33,4 +33,21 @@ object Form1: TForm1
     OnClick = Decode_B64Click
     TabOrder = 2
   end
+  object UUID_Output: TEdit
+    Left = 16
+    Height = 33
+    Top = 56
+    Width = 320
+    HideSelection = False
+    TabOrder = 3
+  end
+  object Generate_UUID_Btn: TButton
+    Left = 352
+    Height = 33
+    Top = 56
+    Width = 208
+    Caption = 'Generate UUID'
+    OnClick = Generate_UUID_BtnClick
+    TabOrder = 4
+  end
 end
